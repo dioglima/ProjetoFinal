@@ -31,6 +31,12 @@ public class Leitura {
 					// System.out.println("linha: " + linha + linha.contains(";"));
 					linhas.add(splitLinha(linha));
 				}
+				
+				DadosCombatentesDAO d = new DadosCombatentesDAO();
+				DadosCombates dc = new DadosCombates();
+				
+				
+				
 			}
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();

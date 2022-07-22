@@ -4,7 +4,7 @@ import java.awt.GridLayout;
 
 import javax.swing.*;
 
-public class Teclado extends JPanel {
+public class Teclado extends JPanel  {
 
     private Display display;
 
@@ -19,7 +19,7 @@ public class Teclado extends JPanel {
 
         setLayout(new GridLayout(6,2));
 
-        add(tipo);
+        add(tipo, "1");
         add(criarTexto("",5));
 
         add(nome);

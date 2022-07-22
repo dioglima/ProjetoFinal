@@ -2,11 +2,12 @@ package apresentacao;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.JFrame;
-import javax.swing.border.Border;
 
-public class Interface extends JFrame {
+public class Interface extends JFrame implements ActionListener {
 	
 	public Interface() {
 		organizador();
@@ -27,6 +28,12 @@ public class Interface extends JFrame {
 		add(display,BorderLayout.NORTH);
 		add(teclado,BorderLayout.CENTER);
 		add(botao,BorderLayout.SOUTH);
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		
+		
 	}
 
 }

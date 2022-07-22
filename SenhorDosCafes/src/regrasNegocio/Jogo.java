@@ -2,6 +2,8 @@ package regrasNegocio;
 
 import java.io.File;
 import java.util.ArrayList;
+
+import persistencia.DadosCombatentesDAO;
 import persistencia.DadosCombates;
 import persistencia.Leitura;
 
@@ -10,6 +12,7 @@ public class Jogo {
 	public Leitura ler;
 
 	private ArrayList<CombateIndividual> combatesIndividuais;
+	private DadosCombatentesDAO dados;
 
 	public Jogo() {
 		combatesIndividuais = new ArrayList<CombateIndividual>();
@@ -73,7 +76,9 @@ public class Jogo {
 						String nomeReposta = nomeDoArquivoMaisCaminho.replace(".csv", "_resposta.csv");
 						montarCombatesIndividuais(nomeDoArquivoMaisCaminho);
 						Relatorio relatorio = new Relatorio(combatesIndividuais, nomeReposta);
+						
 						relatorio.gerarRelatorioFinal();
+						
 
 					} catch (Exception e) {
 

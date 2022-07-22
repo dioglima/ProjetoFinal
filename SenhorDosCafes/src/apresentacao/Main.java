@@ -1,5 +1,6 @@
 package apresentacao;
 
+import persistencia.DadosCombatentesDAO;
 import regrasNegocio.Jogo;
 
 public class Main {
@@ -28,6 +29,8 @@ public class Main {
 
 			Jogo j = new Jogo();
 			j.iniciar();
+			DadosCombatentesDAO d = new DadosCombatentesDAO();
+			
 
 			long memoriaFinal = consumoMemoria();
 			long tempoFinal = consumoTempo();
